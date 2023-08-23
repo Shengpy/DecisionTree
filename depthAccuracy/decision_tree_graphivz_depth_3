@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="health <= 0.5\ngini = 0.682\nsamples = 10367\nvalue = [3455, 3424, 1, 3224, 263]\nclass = priority", fillcolor="#fffefe"] ;
+1 [label="gini = 0.0\nsamples = 3455\nvalue = [3455, 0, 0, 0, 0]\nclass = priority", fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="has_nurs <= 3.5\ngini = 0.536\nsamples = 6912\nvalue = [0, 3424, 1, 3224, 263]\nclass = spec_prior", fillcolor="#f8fef4"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="has_nurs <= 1.5\ngini = 0.52\nsamples = 5556\nvalue = [0, 3259, 1, 2033, 263]\nclass = spec_prior", fillcolor="#d1f6ba"] ;
+2 -> 3 ;
+4 [label="gini = 0.499\nsamples = 2753\nvalue = [0, 1070, 0, 1628, 55]\nclass = very_recom", fillcolor="#bebdf6"] ;
+3 -> 4 ;
+5 [label="gini = 0.364\nsamples = 2803\nvalue = [0, 2189, 1, 405, 208]\nclass = spec_prior", fillcolor="#9dec6c"] ;
+3 -> 5 ;
+6 [label="health <= 1.5\ngini = 0.214\nsamples = 1356\nvalue = [0, 165, 0, 1191, 0]\nclass = very_recom", fillcolor="#5754e9"] ;
+2 -> 6 ;
+7 [label="gini = 0.024\nsamples = 664\nvalue = [0, 8, 0, 656, 0]\nclass = very_recom", fillcolor="#3e3be5"] ;
+6 -> 7 ;
+8 [label="gini = 0.351\nsamples = 692\nvalue = [0, 157, 0, 535, 0]\nclass = very_recom", fillcolor="#7573ed"] ;
+6 -> 8 ;
+}

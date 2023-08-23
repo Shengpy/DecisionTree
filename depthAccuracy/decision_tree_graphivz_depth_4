@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="health <= 0.5\ngini = 0.682\nsamples = 10367\nvalue = [3455, 3424, 1, 3224, 263]\nclass = priority", fillcolor="#fffefe"] ;
+1 [label="gini = 0.0\nsamples = 3455\nvalue = [3455, 0, 0, 0, 0]\nclass = priority", fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="has_nurs <= 3.5\ngini = 0.536\nsamples = 6912\nvalue = [0, 3424, 1, 3224, 263]\nclass = spec_prior", fillcolor="#f8fef4"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="has_nurs <= 1.5\ngini = 0.52\nsamples = 5556\nvalue = [0, 3259, 1, 2033, 263]\nclass = spec_prior", fillcolor="#d1f6ba"] ;
+2 -> 3 ;
+4 [label="parents <= 1.5\ngini = 0.499\nsamples = 2753\nvalue = [0, 1070, 0, 1628, 55]\nclass = very_recom", fillcolor="#bebdf6"] ;
+3 -> 4 ;
+5 [label="gini = 0.35\nsamples = 1844\nvalue = [0, 417, 0, 1427, 0]\nclass = very_recom", fillcolor="#7573ed"] ;
+4 -> 5 ;
+6 [label="gini = 0.431\nsamples = 909\nvalue = [0, 653, 0, 201, 55]\nclass = spec_prior", fillcolor="#abee81"] ;
+4 -> 6 ;
+7 [label="parents <= 0.5\ngini = 0.364\nsamples = 2803\nvalue = [0, 2189, 1, 405, 208]\nclass = spec_prior", fillcolor="#9dec6c"] ;
+3 -> 7 ;
+8 [label="gini = 0.491\nsamples = 935\nvalue = [0, 530, 0, 405, 0]\nclass = spec_prior", fillcolor="#e0f9d0"] ;
+7 -> 8 ;
+9 [label="gini = 0.199\nsamples = 1868\nvalue = [0, 1659, 1, 0, 208]\nclass = spec_prior", fillcolor="#8ce852"] ;
+7 -> 9 ;
+10 [label="health <= 1.5\ngini = 0.214\nsamples = 1356\nvalue = [0, 165, 0, 1191, 0]\nclass = very_recom", fillcolor="#5754e9"] ;
+2 -> 10 ;
+11 [label="children <= 0.5\ngini = 0.024\nsamples = 664\nvalue = [0, 8, 0, 656, 0]\nclass = very_recom", fillcolor="#3e3be5"] ;
+10 -> 11 ;
+12 [label="gini = 0.092\nsamples = 165\nvalue = [0, 8, 0, 157, 0]\nclass = very_recom", fillcolor="#4643e6"] ;
+11 -> 12 ;
+13 [label="gini = 0.0\nsamples = 499\nvalue = [0, 0, 0, 499, 0]\nclass = very_recom", fillcolor="#3c39e5"] ;
+11 -> 13 ;
+14 [label="housing <= 0.5\ngini = 0.351\nsamples = 692\nvalue = [0, 157, 0, 535, 0]\nclass = very_recom", fillcolor="#7573ed"] ;
+10 -> 14 ;
+15 [label="gini = 0.495\nsamples = 232\nvalue = [0, 104, 0, 128, 0]\nclass = very_recom", fillcolor="#dadafa"] ;
+14 -> 15 ;
+16 [label="gini = 0.204\nsamples = 460\nvalue = [0, 53, 0, 407, 0]\nclass = very_recom", fillcolor="#5553e8"] ;
+14 -> 16 ;
+}
